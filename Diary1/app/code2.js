@@ -43,7 +43,7 @@ gdjs._35222_35258_21270_22580_26223Code.GD_9526283_9520572_9595_9520786_9523384O
 gdjs._35222_35258_21270_22580_26223Code.GD_9526283_9520572_9595_9520786_9523384Objects2= [];
 
 
-gdjs._35222_35258_21270_22580_26223Code.userFunc0xa70e40 = function GDJSInlineCode(runtimeScene, objects) {
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xa46608 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     var url = runtimeScene.getGame().getVariables().get("API_Response").getAsString();
@@ -89,7 +89,7 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList0 = function(runtimeScene) {
 /* Reuse gdjs._35222_35258_21270_22580_26223Code.GDBackgroundObjects1 */
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDBackgroundObjects1;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0xa70e40(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xa46608(runtimeScene, objects);
 
 }
 
@@ -125,7 +125,7 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(1), 
 }
 
 
-};gdjs._35222_35258_21270_22580_26223Code.userFunc0xaa3740 = function GDJSInlineCode(runtimeScene, objects) {
+};gdjs._35222_35258_21270_22580_26223Code.userFunc0xa77d78 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     try {
@@ -180,12 +180,12 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList2 = function(runtimeScene) {
 /* Reuse gdjs._35222_35258_21270_22580_26223Code.GDCHI_9595BoyObjects1 */
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDCHI_9595BoyObjects1;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0xaa3740(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xa77d78(runtimeScene, objects);
 
 }
 
 
-};gdjs._35222_35258_21270_22580_26223Code.userFunc0x9c7468 = function GDJSInlineCode(runtimeScene, objects) {
+};gdjs._35222_35258_21270_22580_26223Code.userFunc0xf1ab30 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     try {
@@ -205,7 +205,7 @@ gdjs._35222_35258_21270_22580_26223Code.userFunc0xaa3740(runtimeScene, objects);
         var encodedText = btoa(unescape(encodeURIComponent(content)));
         
         // ⚠️ 請填入你的 Google Apps Script 網址
-        const TRANSLATE_URL = "https://script.google.com/macros/s/AKfycbyXWYytKKiWCgPAxSwLvSFFtjXwKKZyv8Xo8c5SkK7ecp0pVqk5Kk3ecfiJTUn-PJEytg/exec";
+        const TRANSLATE_URL = "/api/google-script-2";
 
         // 2. 發送請求
         fetch(TRANSLATE_URL, {
@@ -273,7 +273,7 @@ gdjs.copyArray(gdjs._35222_35258_21270_22580_26223Code.GDENG_9595BoyObjects1, gd
 
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDENG_9595BoyObjects2;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0x9c7468(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xf1ab30(runtimeScene, objects);
 
 }
 
@@ -294,7 +294,7 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList3(runtimeScene);} //End of sub
 }
 
 
-};gdjs._35222_35258_21270_22580_26223Code.userFunc0x9ffd90 = function GDJSInlineCode(runtimeScene) {
+};gdjs._35222_35258_21270_22580_26223Code.userFunc0xae95e8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 (function(runtimeScene) {
     try {
@@ -331,12 +331,12 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList5 = function(runtimeScene) {
 {
 
 
-gdjs._35222_35258_21270_22580_26223Code.userFunc0x9ffd90(runtimeScene);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xae95e8(runtimeScene);
 
 }
 
 
-};gdjs._35222_35258_21270_22580_26223Code.userFunc0x9fe758 = function GDJSInlineCode(runtimeScene, objects) {
+};gdjs._35222_35258_21270_22580_26223Code.userFunc0xe79618 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     try {
@@ -356,7 +356,7 @@ gdjs._35222_35258_21270_22580_26223Code.userFunc0x9ffd90(runtimeScene);
         var encodedText = btoa(unescape(encodeURIComponent(content)));
         
         // ⚠️ 請填入你的 Google Apps Script 網址
-        const TRANSLATE_URL = "https://script.google.com/macros/s/AKfycbyXWYytKKiWCgPAxSwLvSFFtjXwKKZyv8Xo8c5SkK7ecp0pVqk5Kk3ecfiJTUn-PJEytg/exec";
+        const TRANSLATE_URL = "/api/google-script-2";
 
         // 2. 發送請求
         fetch(TRANSLATE_URL, {
@@ -424,7 +424,7 @@ gdjs.copyArray(gdjs._35222_35258_21270_22580_26223Code.GDENG_9595GirlObjects1, g
 
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDENG_9595GirlObjects2;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0x9fe758(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xe79618(runtimeScene, objects);
 
 }
 
@@ -450,7 +450,7 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList6(runtimeScene);} //End of sub
 }
 
 
-};gdjs._35222_35258_21270_22580_26223Code.userFunc0x11d9080 = function GDJSInlineCode(runtimeScene, objects) {
+};gdjs._35222_35258_21270_22580_26223Code.userFunc0xbf6138 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     try {
@@ -504,12 +504,12 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList8 = function(runtimeScene) {
 /* Reuse gdjs._35222_35258_21270_22580_26223Code.GDStartButtonObjects1 */
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDStartButtonObjects1;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0x11d9080(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xbf6138(runtimeScene, objects);
 
 }
 
 
-};gdjs._35222_35258_21270_22580_26223Code.userFunc0xaa3600 = function GDJSInlineCode(runtimeScene, objects) {
+};gdjs._35222_35258_21270_22580_26223Code.userFunc0x9fbb88 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     try {
@@ -571,7 +571,7 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList9 = function(runtimeScene) {
 /* Reuse gdjs._35222_35258_21270_22580_26223Code.GDSaveButtonObjects1 */
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDSaveButtonObjects1;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0xaa3600(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0x9fbb88(runtimeScene, objects);
 
 }
 

@@ -39,7 +39,7 @@ gdjs._26085_35352_25776_23531Code.GDBlackSquareDecoratedButtonObjects2= [];
 gdjs._26085_35352_25776_23531Code.GDBlackSquareDecoratedButtonObjects3= [];
 
 
-gdjs._26085_35352_25776_23531Code.userFunc0xc53fb0 = function GDJSInlineCode(runtimeScene, objects) {
+gdjs._26085_35352_25776_23531Code.userFunc0xbd4818 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     // 1. 強制直接讀取你的全域變數 (Global Variables)
@@ -55,7 +55,7 @@ gdjs._26085_35352_25776_23531Code.userFunc0xc53fb0 = function GDJSInlineCode(run
     
     // 2. 編碼並發送
     var encodedText = btoa(unescape(encodeURIComponent(fullText)));
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwbt2SqQZwlBj7NsWWJ1PKiTgSAv10OHZZu3kTKhmjVKBKKi80nZVXlrI8aiuZ6uIXmqw/exec";
+    const SCRIPT_URL = "/api/google-script-1";
 
     fetch(SCRIPT_URL, {
         method: 'POST',
@@ -80,7 +80,7 @@ gdjs.copyArray(asyncObjectsList.getObjects("提交按鈕"), gdjs._26085_35352_25
 
 
 const objects = gdjs._26085_35352_25776_23531Code.GD_9525552_9520132_9525353_9537397Objects2;
-gdjs._26085_35352_25776_23531Code.userFunc0xc53fb0(runtimeScene, objects);
+gdjs._26085_35352_25776_23531Code.userFunc0xbd4818(runtimeScene, objects);
 
 }
 
