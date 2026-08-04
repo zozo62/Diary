@@ -1,0 +1,30 @@
+{
+  "name": "_25105_30340_26085_35352",
+  "main": "main.js",
+  "productName": "我的日記",
+  "description": "我的日記",
+  "author": "",
+  "version": "1.0.0",
+  "dependencies": {
+    
+    "@electron/remote": "2.1.2"
+  },
+  "scripts": {
+    "start": "electron main.js",
+    "build": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "devDependencies": {
+    "electron": "32.3.3",
+    "electron-builder": "26.4.0"
+  },
+  "build": {
+    "appId": "com.example.gamename",
+    "extraFiles": [
+      "LICENSE.GDevelop.txt"
+    ],
+    "directories": {
+      "buildResources": "buildResources"
+    }
+  }
+}
