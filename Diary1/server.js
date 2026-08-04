@@ -23,10 +23,10 @@ app.all('/api/google-script-2', async (req, res) => {
 });
 
 // ==========================================
-// 3. 新增：代理 Google 語音 TTS 請求
+// 3. 代理 Google 語音 TTS 請求（已修正目標網址）
 // ==========================================
 app.all('/api/tts', async (req, res) => {
-    const TARGET_URL = 'https://translate.google.com/translate_tts?ie=UTF-8&q=';
+    const TARGET_URL = 'https://translate.google.com/translate_tts';
     handleProxy(req, res, TARGET_URL);
 });
 
@@ -50,7 +50,9 @@ async function handleProxy(req, res, targetUrl) {
         let fetchUrl = targetUrl;
         if (Object.keys(req.query).length > 0) {
             const queryString = new URLSearchParams(req.query).toString();
-            fetchUrl = `${targetUrl}?${queryString}`;
+            // 如果原本的 targetUrl 已經帶有參數（例如 ?ie=UTF-8&q=），會自動用 & 串接；如果沒有則用 ? 串接
+            const separator = targetUrl.includes('?') ? '&' : '?';
+            fetchUrl = `${targetUrl}${separator}${queryString}`;
         }
 
         const response = await fetch(fetchUrl, options);
