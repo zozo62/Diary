@@ -43,7 +43,7 @@ gdjs._35222_35258_21270_22580_26223Code.GD_9526283_9520572_9595_9520786_9523384O
 gdjs._35222_35258_21270_22580_26223Code.GD_9526283_9520572_9595_9520786_9523384Objects2= [];
 
 
-gdjs._35222_35258_21270_22580_26223Code.userFunc0xa10ca0 = function GDJSInlineCode(runtimeScene, objects) {
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xf87d60 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     var url = runtimeScene.getGame().getVariables().get("API_Response").getAsString();
@@ -89,7 +89,7 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList0 = function(runtimeScene) {
 /* Reuse gdjs._35222_35258_21270_22580_26223Code.GDBackgroundObjects1 */
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDBackgroundObjects1;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0xa10ca0(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xf87d60(runtimeScene, objects);
 
 }
 
@@ -125,7 +125,7 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(1), 
 }
 
 
-};gdjs._35222_35258_21270_22580_26223Code.userFunc0xceffa0 = function GDJSInlineCode(runtimeScene, objects) {
+};gdjs._35222_35258_21270_22580_26223Code.userFunc0xec4180 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     try {
@@ -180,12 +180,12 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList2 = function(runtimeScene) {
 /* Reuse gdjs._35222_35258_21270_22580_26223Code.GDCHI_9595BoyObjects1 */
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDCHI_9595BoyObjects1;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0xceffa0(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xec4180(runtimeScene, objects);
 
 }
 
 
-};gdjs._35222_35258_21270_22580_26223Code.userFunc0xa74cf0 = function GDJSInlineCode(runtimeScene, objects) {
+};gdjs._35222_35258_21270_22580_26223Code.userFunc0xc084b0 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     try {
@@ -273,7 +273,7 @@ gdjs.copyArray(gdjs._35222_35258_21270_22580_26223Code.GDENG_9595BoyObjects1, gd
 
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDENG_9595BoyObjects2;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0xa74cf0(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xc084b0(runtimeScene, objects);
 
 }
 
@@ -294,7 +294,7 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList3(runtimeScene);} //End of sub
 }
 
 
-};gdjs._35222_35258_21270_22580_26223Code.userFunc0xb08e90 = function GDJSInlineCode(runtimeScene, objects) {
+};gdjs._35222_35258_21270_22580_26223Code.userFunc0xaa7840 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     try {
@@ -313,15 +313,16 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList3(runtimeScene);} //End of sub
         
         // 2. 使用 Google 翻譯的語音 API 產生標準普通話 (tl=zh-CN)
         var encodedText = encodeURIComponent(content);
+        // 這裡加上了問號 ? 來正確傳遞參數給 /api/tts 代理伺服器
         var audioUrl = "/api/tts" + encodedText + "&tl=zh-CN&client=tw-ob";
 
         // 3. 直接播放該語音檔案
         var audio = new Audio(audioUrl);
         audio.play().catch(err => {
-        
-
-    } catch (error) {
-        alert("語音腳本錯誤: " + error.toString());
+            console.error("播放語音失敗：", err);
+        });
+    } catch (e) {
+        console.error("執行語音腳本發生錯誤：", e);
     }
 })(runtimeScene);
 };
@@ -332,12 +333,12 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList5 = function(runtimeScene) {
 /* Reuse gdjs._35222_35258_21270_22580_26223Code.GDCHI_9595GirlObjects1 */
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDCHI_9595GirlObjects1;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0xb08e90(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xaa7840(runtimeScene, objects);
 
 }
 
 
-};gdjs._35222_35258_21270_22580_26223Code.userFunc0xcc6598 = function GDJSInlineCode(runtimeScene, objects) {
+};gdjs._35222_35258_21270_22580_26223Code.userFunc0x8ced50 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     try {
@@ -425,7 +426,7 @@ gdjs.copyArray(gdjs._35222_35258_21270_22580_26223Code.GDENG_9595GirlObjects1, g
 
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDENG_9595GirlObjects2;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0xcc6598(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0x8ced50(runtimeScene, objects);
 
 }
 
@@ -451,7 +452,7 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList6(runtimeScene);} //End of sub
 }
 
 
-};gdjs._35222_35258_21270_22580_26223Code.userFunc0xeb6aa8 = function GDJSInlineCode(runtimeScene, objects) {
+};gdjs._35222_35258_21270_22580_26223Code.userFunc0xef9ea8 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     try {
@@ -505,12 +506,12 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList8 = function(runtimeScene) {
 /* Reuse gdjs._35222_35258_21270_22580_26223Code.GDStartButtonObjects1 */
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDStartButtonObjects1;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0xeb6aa8(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xef9ea8(runtimeScene, objects);
 
 }
 
 
-};gdjs._35222_35258_21270_22580_26223Code.userFunc0xa07bc8 = function GDJSInlineCode(runtimeScene, objects) {
+};gdjs._35222_35258_21270_22580_26223Code.userFunc0xa9eea8 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     try {
@@ -572,7 +573,7 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList9 = function(runtimeScene) {
 /* Reuse gdjs._35222_35258_21270_22580_26223Code.GDSaveButtonObjects1 */
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDSaveButtonObjects1;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0xa07bc8(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xa9eea8(runtimeScene, objects);
 
 }
 
