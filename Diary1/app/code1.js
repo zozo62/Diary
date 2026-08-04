@@ -39,7 +39,7 @@ gdjs._26085_35352_25776_23531Code.GDBlackSquareDecoratedButtonObjects2= [];
 gdjs._26085_35352_25776_23531Code.GDBlackSquareDecoratedButtonObjects3= [];
 
 
-gdjs._26085_35352_25776_23531Code.userFunc0xb86170 = function GDJSInlineCode(runtimeScene, objects) {
+gdjs._26085_35352_25776_23531Code.userFunc0xad7088 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     // 1. 強制直接讀取你的全域變數 (Global Variables)
@@ -80,7 +80,7 @@ gdjs.copyArray(asyncObjectsList.getObjects("提交按鈕"), gdjs._26085_35352_25
 
 
 const objects = gdjs._26085_35352_25776_23531Code.GD_9525552_9520132_9525353_9537397Objects2;
-gdjs._26085_35352_25776_23531Code.userFunc0xb86170(runtimeScene, objects);
+gdjs._26085_35352_25776_23531Code.userFunc0xad7088(runtimeScene, objects);
 
 }
 
