@@ -26,7 +26,7 @@ app.all('/api/google-script-2', async (req, res) => {
 // 3. 新增：代理 Google 語音 TTS 請求
 // ==========================================
 app.all('/api/tts', async (req, res) => {
-    const TARGET_URL = 'https://translate.google.com/translate_tts';
+    const TARGET_URL = 'https://translate.google.com/translate_tts?ie=UTF-8&q=';
     handleProxy(req, res, TARGET_URL);
 });
 
