@@ -1,0 +1,19 @@
+{
+  "name": "_25105_30340_26085_35352",
+  "main": "server.js",
+  "productName": "我的日記",
+  "description": "我的日記",
+  "author": "",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "^4.19.2",
+    "@electron/remote": "2.1.2"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "devDependencies": {
+    "electron": "32.3.3",
+    "electron-builder": "26.4.0"
+  }
+}
