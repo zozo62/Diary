@@ -43,7 +43,7 @@ gdjs._35222_35258_21270_22580_26223Code.GD_9526283_9520572_9595_9520786_9523384O
 gdjs._35222_35258_21270_22580_26223Code.GD_9526283_9520572_9595_9520786_9523384Objects2= [];
 
 
-gdjs._35222_35258_21270_22580_26223Code.userFunc0x976fb0 = function GDJSInlineCode(runtimeScene, objects) {
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xe68560 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     var url = runtimeScene.getGame().getVariables().get("API_Response").getAsString();
@@ -89,12 +89,12 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList0 = function(runtimeScene) {
 /* Reuse gdjs._35222_35258_21270_22580_26223Code.GDBackgroundObjects1 */
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDBackgroundObjects1;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0x976fb0(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xe68560(runtimeScene, objects);
 
 }
 
 
-};gdjs._35222_35258_21270_22580_26223Code.userFunc0xcf46c8 = function GDJSInlineCode(runtimeScene, objects) {
+};gdjs._35222_35258_21270_22580_26223Code.userFunc0xa3ca80 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     try {
@@ -135,12 +135,12 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList1 = function(runtimeScene) {
 /* Reuse gdjs._35222_35258_21270_22580_26223Code.GDCan_9595BoyObjects1 */
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDCan_9595BoyObjects1;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0xcf46c8(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xa3ca80(runtimeScene, objects);
 
 }
 
 
-};gdjs._35222_35258_21270_22580_26223Code.userFunc0xc65708 = function GDJSInlineCode(runtimeScene, objects) {
+};gdjs._35222_35258_21270_22580_26223Code.userFunc0xa07d78 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     try {
@@ -181,12 +181,12 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList2 = function(runtimeScene) {
 /* Reuse gdjs._35222_35258_21270_22580_26223Code.GDCHI_9595BoyObjects1 */
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDCHI_9595BoyObjects1;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0xc65708(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xa07d78(runtimeScene, objects);
 
 }
 
 
-};gdjs._35222_35258_21270_22580_26223Code.userFunc0xc62440 = function GDJSInlineCode(runtimeScene, objects) {
+};gdjs._35222_35258_21270_22580_26223Code.userFunc0xd286f0 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     try {
@@ -249,12 +249,12 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList3 = function(runtimeScene) {
 /* Reuse gdjs._35222_35258_21270_22580_26223Code.GDENG_9595BoyObjects1 */
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDENG_9595BoyObjects1;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0xc62440(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xd286f0(runtimeScene, objects);
 
 }
 
 
-};gdjs._35222_35258_21270_22580_26223Code.userFunc0xa0f8a0 = function GDJSInlineCode(runtimeScene, objects) {
+};gdjs._35222_35258_21270_22580_26223Code.userFunc0xeee658 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     try {
@@ -295,12 +295,12 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList4 = function(runtimeScene) {
 /* Reuse gdjs._35222_35258_21270_22580_26223Code.GDCan_9595GirlObjects1 */
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDCan_9595GirlObjects1;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0xa0f8a0(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xeee658(runtimeScene, objects);
 
 }
 
 
-};gdjs._35222_35258_21270_22580_26223Code.userFunc0x9ba670 = function GDJSInlineCode(runtimeScene, objects) {
+};gdjs._35222_35258_21270_22580_26223Code.userFunc0xeb5b28 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     try {
@@ -341,12 +341,12 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList5 = function(runtimeScene) {
 /* Reuse gdjs._35222_35258_21270_22580_26223Code.GDCHI_9595GirlObjects1 */
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDCHI_9595GirlObjects1;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0x9ba670(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xeb5b28(runtimeScene, objects);
 
 }
 
 
-};gdjs._35222_35258_21270_22580_26223Code.userFunc0xb16a20 = function GDJSInlineCode(runtimeScene, objects) {
+};gdjs._35222_35258_21270_22580_26223Code.userFunc0xab1328 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     try {
@@ -409,12 +409,12 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList6 = function(runtimeScene) {
 /* Reuse gdjs._35222_35258_21270_22580_26223Code.GDENG_9595GirlObjects1 */
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDENG_9595GirlObjects1;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0xb16a20(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xab1328(runtimeScene, objects);
 
 }
 
 
-};gdjs._35222_35258_21270_22580_26223Code.userFunc0xc01640 = function GDJSInlineCode(runtimeScene, objects) {
+};gdjs._35222_35258_21270_22580_26223Code.userFunc0xc3b350 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     try {
@@ -468,12 +468,12 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList7 = function(runtimeScene) {
 /* Reuse gdjs._35222_35258_21270_22580_26223Code.GDStartButtonObjects1 */
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDStartButtonObjects1;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0xc01640(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xc3b350(runtimeScene, objects);
 
 }
 
 
-};gdjs._35222_35258_21270_22580_26223Code.userFunc0x1140668 = function GDJSInlineCode(runtimeScene, objects) {
+};gdjs._35222_35258_21270_22580_26223Code.userFunc0xad2a60 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     try {
@@ -535,7 +535,7 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList8 = function(runtimeScene) {
 /* Reuse gdjs._35222_35258_21270_22580_26223Code.GDSaveButtonObjects1 */
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDSaveButtonObjects1;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0x1140668(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xad2a60(runtimeScene, objects);
 
 }
 

@@ -49,7 +49,7 @@ app.get('/api/edge-tts', async (req, res) => {
         } else if (lang.includes("zh-HK")) {
             voice = (gender === "male") ? "zh-HK-WanLungNeural" : "zh-HK-HiuMaanNeural";
         } else if (lang.includes("en")) {
-            voice = (gender === "male") ? "en-US-RyanMultilingualNeural" : "en-US-AriaNeural";
+            voice = (gender === "male") ? "en-US-ChristopherNeural" : "en-US-AriaNeural";
         }
 
         const filePath = path.join(__dirname, `temp_${Date.now()}.mp3`);
