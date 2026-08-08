@@ -43,7 +43,7 @@ gdjs._35222_35258_21270_22580_26223Code.GD_9526283_9520572_9595_9520786_9523384O
 gdjs._35222_35258_21270_22580_26223Code.GD_9526283_9520572_9595_9520786_9523384Objects2= [];
 
 
-gdjs._35222_35258_21270_22580_26223Code.userFunc0x99a760 = function GDJSInlineCode(runtimeScene, objects) {
+gdjs._35222_35258_21270_22580_26223Code.userFunc0x9b3b48 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     var url = runtimeScene.getGame().getVariables().get("API_Response").getAsString();
@@ -89,12 +89,12 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList0 = function(runtimeScene) {
 /* Reuse gdjs._35222_35258_21270_22580_26223Code.GDBackgroundObjects1 */
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDBackgroundObjects1;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0x99a760(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0x9b3b48(runtimeScene, objects);
 
 }
 
 
-};gdjs._35222_35258_21270_22580_26223Code.userFunc0xafef48 = function GDJSInlineCode(runtimeScene, objects) {
+};gdjs._35222_35258_21270_22580_26223Code.userFunc0xa4a1c8 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     try {
@@ -135,12 +135,12 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList1 = function(runtimeScene) {
 /* Reuse gdjs._35222_35258_21270_22580_26223Code.GDCan_9595BoyObjects1 */
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDCan_9595BoyObjects1;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0xafef48(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xa4a1c8(runtimeScene, objects);
 
 }
 
 
-};gdjs._35222_35258_21270_22580_26223Code.userFunc0xc7bb78 = function GDJSInlineCode(runtimeScene, objects) {
+};gdjs._35222_35258_21270_22580_26223Code.userFunc0xd345c0 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     try {
@@ -181,12 +181,12 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList2 = function(runtimeScene) {
 /* Reuse gdjs._35222_35258_21270_22580_26223Code.GDCHI_9595BoyObjects1 */
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDCHI_9595BoyObjects1;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0xc7bb78(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xd345c0(runtimeScene, objects);
 
 }
 
 
-};gdjs._35222_35258_21270_22580_26223Code.userFunc0xee26a8 = function GDJSInlineCode(runtimeScene, objects) {
+};gdjs._35222_35258_21270_22580_26223Code.userFunc0xaa9cb0 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     try {
@@ -204,11 +204,9 @@ gdjs._35222_35258_21270_22580_26223Code.userFunc0xc7bb78(runtimeScene, objects);
         }
         
         var encodedText = btoa(unescape(encodeURIComponent(content)));
-        
-        // ⚠️ 請填入你的 Google Apps Script 網址
         const TRANSLATE_URL = "/api/google-script-2";
 
-        // 2. 發送請求
+        // 2. 發送請求進行英文翻譯
         fetch(TRANSLATE_URL, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -223,14 +221,21 @@ gdjs._35222_35258_21270_22580_26223Code.userFunc0xc7bb78(runtimeScene, objects);
         .then(data => {
             var finalResult = String(data.translation || "Translation Error");
             
-            // 3. 成功取得翻譯，安全更新變數
+            // 3. 成功取得翻譯，更新 GDevelop 變數（讓畫面顯示英文文字）
             runtimeScene.getGame().getVariables().get("FullText").setString(finalResult);
-            runtimeScene.getGame().getVariables().get("CharIndex").setNumber(1);
             runtimeScene.getGame().getVariables().get("IsTranslated").setNumber(1);
             
-            // 如果你原本在 GDevelop 事件裡有設定計時器歸零，可以透過變數通知，這裡就不在 JS 裡強制調用有問題的函式
+            // 4. 【新增】拿到英文翻譯後，直接組合成微軟 AI 語音的網址並播放！
+            var encodedEnglishText = encodeURIComponent(finalResult);
+            
+            // 這裡可以根據你是 "ENG_Girl" 還是 "ENG_Boy" 來改 gender=female 或 gender=male
+            var audioUrl = "/api/edge-tts?q=" + encodedEnglishText + "&tl=en&gender=male";
+            
+            var audio = new Audio(audioUrl);
+            audio.play().catch(err => {
+                console.error("播放英文微軟語音失敗：", err);
+            });
         })
-       
 
     } catch (error) {
         alert("腳本嚴重崩潰: " + error.toString());
@@ -274,7 +279,7 @@ gdjs.copyArray(gdjs._35222_35258_21270_22580_26223Code.GDENG_9595BoyObjects1, gd
 
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDENG_9595BoyObjects2;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0xee26a8(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xaa9cb0(runtimeScene, objects);
 
 }
 
@@ -295,7 +300,7 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList3(runtimeScene);} //End of sub
 }
 
 
-};gdjs._35222_35258_21270_22580_26223Code.userFunc0xab6eb0 = function GDJSInlineCode(runtimeScene, objects) {
+};gdjs._35222_35258_21270_22580_26223Code.userFunc0xb11068 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     try {
@@ -336,12 +341,12 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList5 = function(runtimeScene) {
 /* Reuse gdjs._35222_35258_21270_22580_26223Code.GDCan_9595GirlObjects1 */
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDCan_9595GirlObjects1;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0xab6eb0(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xb11068(runtimeScene, objects);
 
 }
 
 
-};gdjs._35222_35258_21270_22580_26223Code.userFunc0xe33ba8 = function GDJSInlineCode(runtimeScene, objects) {
+};gdjs._35222_35258_21270_22580_26223Code.userFunc0x976bc8 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     try {
@@ -382,12 +387,12 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList6 = function(runtimeScene) {
 /* Reuse gdjs._35222_35258_21270_22580_26223Code.GDCHI_9595GirlObjects1 */
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDCHI_9595GirlObjects1;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0xe33ba8(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0x976bc8(runtimeScene, objects);
 
 }
 
 
-};gdjs._35222_35258_21270_22580_26223Code.userFunc0xa886a8 = function GDJSInlineCode(runtimeScene, objects) {
+};gdjs._35222_35258_21270_22580_26223Code.userFunc0xb1bf48 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     try {
@@ -405,11 +410,9 @@ gdjs._35222_35258_21270_22580_26223Code.userFunc0xe33ba8(runtimeScene, objects);
         }
         
         var encodedText = btoa(unescape(encodeURIComponent(content)));
-        
-        // ⚠️ 請填入你的 Google Apps Script 網址
         const TRANSLATE_URL = "/api/google-script-2";
 
-        // 2. 發送請求
+        // 2. 發送請求進行英文翻譯
         fetch(TRANSLATE_URL, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -424,14 +427,21 @@ gdjs._35222_35258_21270_22580_26223Code.userFunc0xe33ba8(runtimeScene, objects);
         .then(data => {
             var finalResult = String(data.translation || "Translation Error");
             
-            // 3. 成功取得翻譯，安全更新變數
+            // 3. 成功取得翻譯，更新 GDevelop 變數（讓畫面顯示英文文字）
             runtimeScene.getGame().getVariables().get("FullText").setString(finalResult);
-            runtimeScene.getGame().getVariables().get("CharIndex").setNumber(1);
             runtimeScene.getGame().getVariables().get("IsTranslated").setNumber(1);
             
-            // 如果你原本在 GDevelop 事件裡有設定計時器歸零，可以透過變數通知，這裡就不在 JS 裡強制調用有問題的函式
+            // 4. 【新增】拿到英文翻譯後，直接組合成微軟 AI 語音的網址並播放！
+            var encodedEnglishText = encodeURIComponent(finalResult);
+            
+            // 這裡可以根據你是 "ENG_Girl" 還是 "ENG_Boy" 來改 gender=female 或 gender=male
+            var audioUrl = "/api/edge-tts?q=" + encodedEnglishText + "&tl=en&gender=female";
+            
+            var audio = new Audio(audioUrl);
+            audio.play().catch(err => {
+                console.error("播放英文微軟語音失敗：", err);
+            });
         })
-        
 
     } catch (error) {
         alert("腳本嚴重崩潰: " + error.toString());
@@ -475,7 +485,7 @@ gdjs.copyArray(gdjs._35222_35258_21270_22580_26223Code.GDENG_9595GirlObjects1, g
 
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDENG_9595GirlObjects2;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0xa886a8(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xb1bf48(runtimeScene, objects);
 
 }
 
@@ -501,7 +511,7 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList7(runtimeScene);} //End of sub
 }
 
 
-};gdjs._35222_35258_21270_22580_26223Code.userFunc0x9b8a40 = function GDJSInlineCode(runtimeScene, objects) {
+};gdjs._35222_35258_21270_22580_26223Code.userFunc0xa49fe8 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     try {
@@ -555,12 +565,12 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList9 = function(runtimeScene) {
 /* Reuse gdjs._35222_35258_21270_22580_26223Code.GDStartButtonObjects1 */
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDStartButtonObjects1;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0x9b8a40(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0xa49fe8(runtimeScene, objects);
 
 }
 
 
-};gdjs._35222_35258_21270_22580_26223Code.userFunc0xa0c428 = function GDJSInlineCode(runtimeScene, objects) {
+};gdjs._35222_35258_21270_22580_26223Code.userFunc0x1102458 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     try {
@@ -622,7 +632,7 @@ gdjs._35222_35258_21270_22580_26223Code.eventsList10 = function(runtimeScene) {
 /* Reuse gdjs._35222_35258_21270_22580_26223Code.GDSaveButtonObjects1 */
 
 const objects = gdjs._35222_35258_21270_22580_26223Code.GDSaveButtonObjects1;
-gdjs._35222_35258_21270_22580_26223Code.userFunc0xa0c428(runtimeScene, objects);
+gdjs._35222_35258_21270_22580_26223Code.userFunc0x1102458(runtimeScene, objects);
 
 }
 
@@ -780,37 +790,6 @@ if (isConditionTrue_0) {
 
 {
 
-
-let isConditionTrue_0 = false;
-{
-gdjs.copyArray(runtimeScene.getObjects("SubtitleText"), gdjs._35222_35258_21270_22580_26223Code.GDSubtitleTextObjects1);
-{for(var i = 0, len = gdjs._35222_35258_21270_22580_26223Code.GDSubtitleTextObjects1.length ;i < len;++i) {
-    gdjs._35222_35258_21270_22580_26223Code.GDSubtitleTextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.string.subStr(gdjs.evtTools.variable.getVariableString(runtimeScene.getGame().getVariables().getFromIndex(4)), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(18)), 45));
-}
-}
-}
-
-}
-
-
-{
-
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "Typewriter") >= gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(2));
-if (isConditionTrue_0) {
-{runtimeScene.getGame().getVariables().getFromIndex(18).add(1);
-}
-{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "Typewriter");
-}
-}
-
-}
-
-
-{
-
 gdjs.copyArray(runtimeScene.getObjects("Btn_Voice_Boy1"), gdjs._35222_35258_21270_22580_26223Code.GDBtn_9595Voice_9595Boy1Objects1);
 
 let isConditionTrue_0 = false;
@@ -871,12 +850,6 @@ isConditionTrue_0 = false;
 if (isConditionTrue_0) {
 {runtimeScene.getGame().getVariables().getFromIndex(4).setString(gdjs.evtTools.variable.getVariableString(runtimeScene.getGame().getVariables().getFromIndex(9).getChild(gdjs.evtTools.common.toString(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(13)))).getChild("Content")));
 }
-{runtimeScene.getGame().getVariables().getFromIndex(18).setNumber(1);
-}
-{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "Typewriter");
-}
-{runtimeScene.getGame().getVariables().getFromIndex(2).setNumber(0.23);
-}
 
 { //Subevents
 gdjs._35222_35258_21270_22580_26223Code.eventsList1(runtimeScene);} //End of subevents
@@ -906,12 +879,6 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 {runtimeScene.getGame().getVariables().getFromIndex(4).setString(gdjs.evtTools.variable.getVariableString(runtimeScene.getGame().getVariables().getFromIndex(9).getChild(gdjs.evtTools.common.toString(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(13)))).getChild("Content")));
-}
-{runtimeScene.getGame().getVariables().getFromIndex(18).setNumber(1);
-}
-{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "Typewriter");
-}
-{runtimeScene.getGame().getVariables().getFromIndex(2).setNumber(0.3);
 }
 
 { //Subevents
@@ -1011,12 +978,6 @@ isConditionTrue_0 = false;
 if (isConditionTrue_0) {
 {runtimeScene.getGame().getVariables().getFromIndex(4).setString(gdjs.evtTools.variable.getVariableString(runtimeScene.getGame().getVariables().getFromIndex(9).getChild(gdjs.evtTools.common.toString(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(13)))).getChild("Content")));
 }
-{runtimeScene.getGame().getVariables().getFromIndex(18).setNumber(1);
-}
-{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "Typewriter");
-}
-{runtimeScene.getGame().getVariables().getFromIndex(2).setNumber(0.28);
-}
 
 { //Subevents
 gdjs._35222_35258_21270_22580_26223Code.eventsList5(runtimeScene);} //End of subevents
@@ -1046,12 +1007,6 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 {runtimeScene.getGame().getVariables().getFromIndex(4).setString(gdjs.evtTools.variable.getVariableString(runtimeScene.getGame().getVariables().getFromIndex(9).getChild(gdjs.evtTools.common.toString(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(13)))).getChild("Content")));
-}
-{runtimeScene.getGame().getVariables().getFromIndex(18).setNumber(1);
-}
-{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "Typewriter");
-}
-{runtimeScene.getGame().getVariables().getFromIndex(2).setNumber(0.33);
 }
 
 { //Subevents
