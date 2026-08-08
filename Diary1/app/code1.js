@@ -39,7 +39,7 @@ gdjs._26085_35352_25776_23531Code.GDBlackSquareDecoratedButtonObjects2= [];
 gdjs._26085_35352_25776_23531Code.GDBlackSquareDecoratedButtonObjects3= [];
 
 
-gdjs._26085_35352_25776_23531Code.userFunc0xb987d8 = function GDJSInlineCode(runtimeScene, objects) {
+gdjs._26085_35352_25776_23531Code.userFunc0xa885d0 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 (function(runtimeScene) {
     // 1. 強制直接讀取你的全域變數 (Global Variables)
@@ -80,19 +80,19 @@ gdjs.copyArray(asyncObjectsList.getObjects("提交按鈕"), gdjs._26085_35352_25
 
 
 const objects = gdjs._26085_35352_25776_23531Code.GD_9525552_9520132_9525353_9537397Objects2;
-gdjs._26085_35352_25776_23531Code.userFunc0xb987d8(runtimeScene, objects);
+gdjs._26085_35352_25776_23531Code.userFunc0xa885d0(runtimeScene, objects);
 
 }
 
 
-};gdjs._26085_35352_25776_23531Code.asyncCallback14820300 = function (runtimeScene, asyncObjectsList) {
+};gdjs._26085_35352_25776_23531Code.asyncCallback14816532 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs._26085_35352_25776_23531Code.localVariables);
 
 { //Subevents
 gdjs._26085_35352_25776_23531Code.eventsList0(runtimeScene, asyncObjectsList);} //End of subevents
 gdjs._26085_35352_25776_23531Code.localVariables.length = 0;
 }
-gdjs._26085_35352_25776_23531Code.idToCallbackMap.set(14820300, gdjs._26085_35352_25776_23531Code.asyncCallback14820300);
+gdjs._26085_35352_25776_23531Code.idToCallbackMap.set(14816532, gdjs._26085_35352_25776_23531Code.asyncCallback14816532);
 gdjs._26085_35352_25776_23531Code.eventsList1 = function(runtimeScene) {
 
 {
@@ -103,7 +103,7 @@ gdjs._26085_35352_25776_23531Code.eventsList1 = function(runtimeScene) {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs._26085_35352_25776_23531Code.localVariables);
 for (const obj of gdjs._26085_35352_25776_23531Code.GD_9525552_9520132_9525353_9537397Objects1) asyncObjectsList.addObject("提交按鈕", obj);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.1), (runtimeScene) => (gdjs._26085_35352_25776_23531Code.asyncCallback14820300(runtimeScene, asyncObjectsList)), 14820300, asyncObjectsList);
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.1), (runtimeScene) => (gdjs._26085_35352_25776_23531Code.asyncCallback14816532(runtimeScene, asyncObjectsList)), 14816532, asyncObjectsList);
 }
 }
 
@@ -124,7 +124,7 @@ isConditionTrue_0 = false;
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(14812236);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(14808468);
 }
 }
 }
@@ -285,7 +285,7 @@ for (var i = 0, k = 0, l = gdjs._26085_35352_25776_23531Code.GD_9525552_9520132_
 gdjs._26085_35352_25776_23531Code.GD_9525552_9520132_9525353_9537397Objects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(14818396);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(14814628);
 }
 }
 if (isConditionTrue_0) {

@@ -40,7 +40,7 @@ gdjs._35282_33394_36984_25799Code.eventsList0 = function(runtimeScene) {
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(14718308);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(14714540);
 }
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("角色A_男"), gdjs._35282_33394_36984_25799Code.GD_9535282_9533394A_9595_9530007Objects1);
